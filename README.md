@@ -19,6 +19,7 @@
 * Install dependencies
     ```
     pip3 install -r requirements.txt
+
     ```
 * Configure app installation in [setup.py](./setup.py)
 * Configure test setup in [pytest.ini](./pytest.ini)
@@ -29,10 +30,12 @@
 * Install app in virtual env in [editable mode](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
     ```
     pip3 install -e .
+
     ```
 * Run the tests
     ```
     pytest tests
+
     ```
 
 ## TROUBLESHOOTING
