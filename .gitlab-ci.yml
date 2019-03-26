@@ -1,7 +1,6 @@
-before_script:
-  - pip3 install -r requirements.txt
-
 pytest:
   image: python:3.5
   script:
+    - pip3 install -r requirements.txt
+    - pip3 install -e .
     - pytest tests
