@@ -7,6 +7,6 @@ before_script:
 unittests:
   tags:
     - commonpf
-    - integration
+    - tests
   script:
     - pytest tests
