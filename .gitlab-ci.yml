@@ -1,5 +1,9 @@
-pytest:
-  image: python:3.5
+image: python:3.5
+
+unittests:
+  tags:
+    - integration
+    - release
   script:
     - pip3 install -r requirements.txt
     - pip3 install -e .
