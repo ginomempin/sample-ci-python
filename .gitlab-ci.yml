@@ -2,6 +2,7 @@ image: python:3.5
 
 unittests:
   tags:
+    - commonpf
     - integration
     - release
   script:

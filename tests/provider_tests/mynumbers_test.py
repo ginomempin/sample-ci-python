@@ -17,5 +17,5 @@ def test_generate_integers_step():
     assert all(n in nums for n in (1, 3, 5, 7, 9))
 
 
-def test_generate_integers_fail():
-    assert len(mynumbers.generate_integers(1, 10, 2)) > 20
+# def test_generate_integers_fail():
+#     assert len(mynumbers.generate_integers(1, 10, 2)) > 20
