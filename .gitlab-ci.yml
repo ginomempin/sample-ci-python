@@ -1,11 +1,12 @@
 image: python:3.5
 
+before_script:
+  - pip3 install -r requirements.txt
+  - pip3 install -e .
+
 unittests:
   tags:
     - commonpf
     - integration
-    - release
   script:
-    - pip3 install -r requirements.txt
-    - pip3 install -e .
     - pytest tests
