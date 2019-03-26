@@ -5,6 +5,7 @@
 * [DEPENDENCIES](#dependencies)
 * [SETUP](#setup)
 * [USAGE](#usage)
+* [TROUBLESHOOTING](#troubleshooting)
 * [DOCUMENTATION](#documentation)
 
 ## DEPENDENCIES
@@ -33,6 +34,12 @@
     ```
     pytest tests
     ```
+
+## TROUBLESHOOTING
+
+* pytest uses cached codes instead of latest
+    * Clear the pytest cache with [--cache-clear](https://docs.pytest.org/en/latest/cache.html#clearing-cache-content)
+    * Optionally, also [clear the generated *\_\_pycache\_\_*](https://stackoverflow.com/q/28991015/2745495)
 
 ## DOCUMENTATION
 
