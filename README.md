@@ -7,7 +7,7 @@
 * [DEPENDENCIES](#dependencies)
 * [SETUP](#setup)
 * [USAGE](#usage)
-* [TROUBLESHOOTING](#troubleshooting)
+* [ISSUES](#issues)
 * [DOCUMENTATION](#documentation)
 
 ## DEPENDENCIES
@@ -69,7 +69,7 @@
     * Commit and push
     * Go to the *Gitlab project* > *CI/CD* > *Pipelines* and/or *Jobs*
 
-## TROUBLESHOOTING
+## ISSUES
 
 * `pytest` uses cached codes instead of latest
     * Clear the `pytest` cache with [--cache-clear](https://docs.pytest.org/en/latest/cache.html#clearing-cache-content)
