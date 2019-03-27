@@ -5,6 +5,8 @@ before_script:
   - pip3 install -e .
 
 run tests on app:
+  only:
+    - master
   tags:
     - commonpf
     - python3
