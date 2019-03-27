@@ -5,6 +5,11 @@ before_script:
   - pip3 install -e .
 
 run tests on app:
+  except:
+    changes:
+      - .gitignore
+      - README.md
+      - docs/*
   tags:
     - commonpf
     - tests
