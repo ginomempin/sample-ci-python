@@ -11,3 +11,4 @@ run tests on app:
     - tests
   script:
     - pytest tests
+  coverage: '/TOTAL.*\s+(\d+%)$/'
