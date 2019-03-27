@@ -75,6 +75,10 @@
     * Make sure that the *.gitlab-ci.yml* has the correct tags
     * Make sure the `gitlab-runner` service is running
     * Make sure the machine running `gitlab-runner` is accessible by the Gitlab instance
+* "*yaml invalid*"
+    * Go to the *Gitlab project* > *CI/CD*
+    * On the top-right portion, click the *CI Lint* button
+    * Paste the contents of *gitlab-ci.yml* file and validate
 * The jobs are not running on the same runner/environment
     * Example: 1 job for build, 1 job for tests
     * As of now, Gitlab CI does not support this:
@@ -82,10 +86,6 @@
         * [Caching general build artifacts between stages](https://gitlab.com/gitlab-org/gitlab-runner/issues/336)
         * [Force all pipeline jobs to execute on same concurrent runner](https://gitlab.com/gitlab-org/gitlab-ce/issues/30060)
     * The current workaround now is to use `before_script` to build and a job for tests
-* *.gitlab-ci.yml* syntax is incorrect
-    * Go to the *Gitlab project* > *CI/CD*
-    * On the top-right portion, click the *CI Lint* button
-    * Paste the contents of *gitlab-ci.yml* file and validate
 
 ## DOCUMENTATION
 
