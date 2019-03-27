@@ -9,6 +9,7 @@ setup(
         "numpy"
     ],
     test_requires=[
-        "pytest"
+        "pytest",
+        "pytest-cov"
     ]
 )

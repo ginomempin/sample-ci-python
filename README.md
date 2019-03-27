@@ -12,6 +12,7 @@
 
 * The main requirements are:
     * [pytest](https://docs.pytest.org/en/latest/contents.html) for running unit tests
+    * [pytest-cov](https://github.com/pytest-dev/pytest-cov) for checking code coverage
     * Access to a Gitlab instance
     * Access to a build/test/server PC for `gitlab-runner`
 * For other example-specific dependencies, see [requirements.txt](./requirements.txt).

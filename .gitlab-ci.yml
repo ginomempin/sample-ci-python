@@ -7,7 +7,7 @@ before_script:
 run tests on app:
   tags:
     - commonpf
-    - tests
     - python3
+    - tests
   script:
     - pytest tests
