@@ -1,21 +1,10 @@
 image: python:3.5
 
-stages:
-  - build
-  - tests
+before_script:
+  - pip3 install -r requirements.txt
+  - pip3 install -e .
 
-do build:
-  stage: build
-  tags:
-    - commonpf
-    - build
-    - python3
-  script:
-    - pip3 install -r requirements.txt
-    - pip3 install -e .
-
-do tests:
-  stage: tests
+run tests on app:
   tags:
     - commonpf
     - tests
