@@ -45,6 +45,9 @@
         * For other configurations, see [GitLab CI/CD Pipeline Configuration Reference](https://docs.gitlab.com/ee/ci/yaml/)
     * Configure the Gitlab Runner at *Gitlab project* > *Settings* > *CI/CD*
         * Select *Disable AutoDevOps* to explicitly require *.gitlab-ci.yml*
+        * Enable the runner only for "important" commits
+            * Enable only on tagged jobs
+            * Enable only on protected branches (ex. `develop`, `master`)
         * Set other options such as *Timeout*, *Custom CI config path*, and *Triggers*
         * Sample Configuration:
             ![Sample Configuration](./docs/sample-ci-runner.png)
@@ -68,6 +71,7 @@
     * Update the [.gitlab-ci.yml](./gitlab-ci.yml) file (if necessary)
     * Commit and push
     * Go to the *Gitlab project* > *CI/CD* > *Pipelines* and/or *Jobs*
+    * It is possible to download the job log by clicking on the *Raw* button
 
 ## ISSUES
 
