@@ -97,10 +97,11 @@
     * See a [discussion](https://gitlab.com/gitlab-org/gitlab-runner/issues/2980#note_106845694) of this behavior here
     * Possible solutions:
         * Manually regularly run `docker system prune`
-        * Setup a `cron` job `docker system prune`
+        * Setup a `cron` job `docker system prune -f`
             ```
             # Cleanup docker containers/volumes every 3am every monday
-            0 3 * * 1 /usr/bin/docker system prune --filter "label=dangling"
+            0 3 * * 1 /usr/bin/docker system prune -f
+
             ```
 
 ## DOCUMENTATION
