@@ -36,7 +36,7 @@
         * Get the coordinator URL and registration tokens:
             * For shared runners: <http://your/gitlab/instance/admin/runners>
             * For project-specific runners: <http://your/gitlab/project/settings/ci_cd>
-        * Use [Docker as the executor](https://docs.gitlab.com/runner/executors/docker.html)
+        * Use [Docker as the executor](https://docs.gitlab.com/runner/executors/docker.html) (see [ISSUES](#issues) section on possible disk space issue)
         * Set project-specific [tags](https://docs.gitlab.com/ee/ci/runners/#using-tags)
     * Configure the CI configuration in [.gitlab-ci.yml](./gitlab-ci.yml)
         * Set which Docker [image](https://docs.gitlab.com/runner/executors/docker.html#the-image-keyword) and [services](https://docs.gitlab.com/runner/executors/docker.html#the-services-keyword) to use
@@ -93,6 +93,15 @@
         * [Caching general build artifacts between stages](https://gitlab.com/gitlab-org/gitlab-runner/issues/336)
         * [Force all pipeline jobs to execute on same concurrent runner](https://gitlab.com/gitlab-org/gitlab-ce/issues/30060)
     * The current workaround now is to use `before_script` to build and a job for tests
+* The `gitlab-runner` is leaving a lot of `-cache-` containers/volumes
+    * See a [discussion](https://gitlab.com/gitlab-org/gitlab-runner/issues/2980#note_106845694) of this behavior here
+    * Possible solutions:
+        * Manually regularly run `docker system prune`
+        * Setup a `cron` job `docker system prune`
+            ```
+            # Cleanup docker containers/volumes every 3am every monday
+            0 3 * * 1 /usr/bin/docker system prune --filter "label=dangling"
+            ```
 
 ## DOCUMENTATION
 
