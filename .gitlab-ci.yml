@@ -4,7 +4,7 @@ before_script:
   - pip3 install -r requirements.txt
   - pip3 install -e .
 
-run tests on app:
+run tests:
   only:
     - master
   tags:
