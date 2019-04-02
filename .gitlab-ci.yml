@@ -1,4 +1,4 @@
-image: python:3.5
+image: localhost:5000/cdpf-python:3.5
 
 before_script:
   - pip3 install -r requirements.txt
