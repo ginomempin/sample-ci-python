@@ -39,7 +39,7 @@
     * Using **Docker**
         * Create a Docker image from the [Dockerfile](./Dockerfile)
             ```
-            docker build --tag:sample-ci-python .
+            docker build --tag sample-ci-python .
             docker run -it sample-ci-python:latest /bin/bash
 
             ```
