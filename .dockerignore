@@ -1,0 +1,15 @@
+
+.git
+.gitignore
+.env
+.vscode
+
+Dockerfile*
+docker-compose*
+.dockerignore
+
+README.md
+docs
+__pycache__
+*.egg-info
+.pytest_cache
