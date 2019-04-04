@@ -21,16 +21,29 @@
 
 ## SETUP
 
-* Setting-Up the Tests
-    * Activate a virtual environment
-    * Install dependencies
-        ```
-        pip3 install -r requirements.txt
+* Configure app installation in [setup.py](./setup.py)
+* Configure test configuration in [pytest.ini](./pytest.ini)
+* Setup the Local Test Environment
+    * Using **virtualenv**
+        * Activate a virtual Environment
+        * Install dependencies
+            ```
+            pip3 install -r requirements.txt
 
-        ```
-    * Configure app installation in [setup.py](./setup.py)
-    * Configure test setup in [pytest.ini](./pytest.ini)
-* Setting-Up Gitlab CI
+            ```
+        * Install app in [editable mode](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
+            ```
+            pip3 install -e .
+
+            ```
+    * Using **Docker**
+        * Create a Docker image from the [Dockerfile](./Dockerfile)
+            ```
+            docker build --tag:sample-ci-python .
+            docker run -it sample-ci-python:latest /bin/bash
+
+            ```
+* Setup Gitlab CI
     * [Install a Gitlab Runner](https://docs.gitlab.com/runner/install/) on a publicly-accessible machine
     * [Register the Runner](https://docs.gitlab.com/runner/register/index.html) with your Gitlab instance
         * Get the coordinator URL and registration tokens:
@@ -54,23 +67,23 @@
 
 ## USAGE
 
-* Manually Running the Tests on Local
-    * Activate a virtual environment
-    * Install app in virtual env in [editable mode](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
-        ```
-        pip3 install -e .
-
-        ```
-    * Run the tests
+* Run the Tests on Local
+    * From the **virtual environment** or from the **Docker image**
         ```
         pytest tests
 
+        ...
+        tests/provider_tests/...test_generate_integers_length PASSED            [1/3]
+        tests/provider_tests/...test_generate_integers_start_and_stop PASSED    [2/3]
+        tests/provider_tests/...test_generate_integers_step PASSED              [3/3]
+        ...
         ```
-* Triggering the CI Pipeline
-    * Make changes to the app and to the tests
-    * Update the [.gitlab-ci.yml](./gitlab-ci.yml) file (if necessary)
-    * Commit and push
-    * Go to the *Gitlab project* > *CI/CD* > *Pipelines* and/or *Jobs*
+* Run the Tests on Gitlab
+    * Make changes in *src/app/* and in *tests/*
+    * Make changes to the [.gitlab-ci.yml](./gitlab-ci.yml) configuration (if necessary)
+    * Commit the changes then push to Gitlab
+    * Go to the *Gitlab project* > *CI/CD* > *Pipelines*
+    * Select the currently *running* job to view progress/result
     * It is possible to download the job log by clicking on the *Raw* button
 
 ## ISSUES
