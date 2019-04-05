@@ -1,9 +1,8 @@
-# This Docker container configuration is only used if it is not possible
-# to run this sample Python app on your own environment. For example, you
-# either don't have a Python runtime environment or you can't install one.
+FROM python:3.5
 
-# Use the same docker image as the one specified in gitlab-ci.yml.
-FROM 192.168.1.37:5000/cdpf-python:3.5
+LABEL NAME="python-3.5" \
+      VERSION="3.5" \
+      DESC="Standard Python 3.5 runtime."
 
 # Set the working directory inside the Docker image
 WORKDIR /sample-ci-python
