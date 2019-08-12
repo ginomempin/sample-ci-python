@@ -51,7 +51,7 @@
             * For project-specific runners: <http://your/gitlab/project/settings/ci_cd>
         * Use [Docker as the executor](https://docs.gitlab.com/runner/executors/docker.html) (see [ISSUES](#issues) section on possible disk space issue)
         * Set project-specific [tags](https://docs.gitlab.com/ee/ci/runners/#using-tags)
-    * Configure the CI configuration in [.gitlab-ci.yml](./gitlab-ci.yml)
+    * Configure the CI configuration in [.gitlab-ci.yml](./.gitlab-ci.yml)
         * Set which Docker [image](https://docs.gitlab.com/runner/executors/docker.html#the-image-keyword) and [services](https://docs.gitlab.com/runner/executors/docker.html#the-services-keyword) to use
         * Set the [tags](https://docs.gitlab.com/ee/ci/runners/#using-tags)
         * Set the commands for `before_script` and `script`
@@ -80,7 +80,7 @@
         ```
 * Run the Tests on Gitlab
     * Make changes in *src/app/* and in *tests/*
-    * Make changes to the [.gitlab-ci.yml](./gitlab-ci.yml) configuration (if necessary)
+    * Make changes to the [.gitlab-ci.yml](./.gitlab-ci.yml) configuration (if necessary)
     * Commit the changes then push to Gitlab
     * Go to the *Gitlab project* > *CI/CD* > *Pipelines*
     * Select the currently *running* job to view progress/result
