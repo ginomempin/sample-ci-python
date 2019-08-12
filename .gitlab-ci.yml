@@ -9,7 +9,6 @@ run tests:
   only:
     - master
   tags:
-    - commonpf
     - python3
     - tests
   script:

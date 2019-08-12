@@ -139,5 +139,5 @@
     * [Deploy a registry server](https://docs.docker.com/registry/deploying/)
     * [Test an insecure registry](https://docs.docker.com/registry/insecure/)
 
-[1]: http://192.168.1.61/commonpf/sample-ci-python/badges/master/pipeline.svg
-[2]: http://192.168.1.61/commonpf/sample-ci-python/badges/master/coverage.svg
+[1]: http://url/to/gitlab/instance/sample-ci-python/badges/master/pipeline.svg
+[2]: http://url/to/gitlab/instance/sample-ci-python/badges/master/coverage.svg
