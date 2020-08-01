@@ -8,7 +8,7 @@
 * [SETUP](#setup)
 * [USAGE](#usage)
 * [ISSUES](#issues)
-* [DOCUMENTATION](#documentation)
+* [REFERENCES](#references)
 
 ## DEPENDENCIES
 
@@ -178,7 +178,7 @@
 
             ```
 
-## DOCUMENTATION
+## REFERENCES
 
 * On Setting-Up the App with `distutils`
     * [Writing the Setup Script](https://docs.python.org/3.8/distutils/setupscript.html#writing-the-setup-script)
