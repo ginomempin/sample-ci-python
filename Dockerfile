@@ -1,17 +1,17 @@
-FROM python:3.5
+FROM python:3.8
 
-LABEL NAME="python-3.5" \
-      VERSION="3.5" \
-      DESC="Standard Python 3.5 runtime."
+LABEL NAME="python-3.8" \
+      VERSION="3.8" \
+      DESC="Python3.8 container"
 
 # Set the working directory inside the Docker image
-WORKDIR /sample-ci-python
+WORKDIR /workspace
 
-# Copy everything
-COPY . /sample-ci-python
+# Copy everything except for files listed in .dockerignore
+COPY . /workspace
 
 # Install dependencies
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Install the app (using setup.py)
-RUN pip3 install -e .
+# Install the app
+RUN pip install -e .
