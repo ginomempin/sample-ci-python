@@ -30,7 +30,7 @@
 
 * Configure the `app` installation in [setup.py](./setup.py) ([reference](https://docs.python.org/3.8/distutils/setupscript.html#writing-the-setup-script))
 * Configure the `tests` configuration in [pytest.ini](./pytest.ini) ([reference](https://docs.pytest.org/en/stable/reference.html#ini-options-ref))
-* Configure the coverage collection in [.coveragerc](./coveragerc) ([reference](https://coverage.readthedocs.io/en/latest/config.html))
+* Configure the coverage collection in [.coveragerc](./.coveragerc) ([reference](https://coverage.readthedocs.io/en/latest/config.html))
 * Setup a local testing environment
     * Using a **virtual environment**
         * Create/Activate a virtual environment
@@ -145,6 +145,20 @@
         * Select the currently *running* job to view progress/result
 * Get the code coverage report
     * From the generated *coverage* directory in the same level as *src* and *tests*
+        ```none
+        (samples) sample-ci-python$ tree -L 1 .
+        .
+        ├── Dockerfile
+        ├── README.md
+        ├── coverage      <-----------------------
+        ├── docs
+        ├── pytest.ini
+        ├── requirements.txt
+        ├── setup.py
+        ├── src
+        └── tests
+
+        ```
     * From the downloadable [artifacts](https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html) of the CI job
 
 ## ISSUES
